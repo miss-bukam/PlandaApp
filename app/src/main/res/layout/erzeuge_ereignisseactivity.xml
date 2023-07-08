@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/ic_ereignishintergund">
+
+    <!-- Kann später alles in Deatil designed werden, gerne von Gizem HAHAHA -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="Zurück zum Home Menue"
+            app:srcCompat="@drawable/homebutton" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ereignis"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:id="@+id/titelEreignisse"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/TitelEingabeEreignis"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titelEreignisse"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/textborder"
+        android:hint="Titel..."
+        android:paddingStart="15dp"
+        android:padding="2dp"
+        android:paddingLeft="10dp"
+        android:textSize="19dp">
+
+    </EditText>
+
+    <!--   <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:timePickerMode="spinner" /> -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="223dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/textborder">
+
+        <EditText
+            android:id="@+id/TextEingabeErg"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="1dp"
+            android:gravity="top|start"
+            android:hint="Schreib etwas ..."
+            android:inputType="textMultiLine"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="265dp"
+            android:scrollbarSize="2dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"></EditText>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp">
+
+        <Button
+            android:id="@+id/btnPick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#6A9736"
+            android:text="Uhrzeit auswählen"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bottonEreigniss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#6A9736"
+            android:text="Datum auswählen"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/speicherungEreignis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#6A9736"
+        android:text="Ereignis erstellen"
+        android:layout_gravity="center"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

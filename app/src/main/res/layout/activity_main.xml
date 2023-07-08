@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?><!-- das alte hintergrundbild -->
+<!-- Toolbar -->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".Activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+
+    <!-- AB HIER BEGINNT LAYOUT HAPUTMENUE -->
+    <!-- android:background="#80BEF4F4" -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallpaper"
+        tools:context=".Activities.MainActivity"
+        android:contentDescription="TODO">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <CalendarView
+                android:id="@+id/calendarViewMain"
+                android:layout_width="match_parent"
+                android:layout_height="302dp"
+                android:contentDescription="uhrzeit"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/aktuTagView"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_below="@id/calendarViewMain"
+                android:layout_margin="12dp"
+                android:paddingTop="7dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_weight="1"
+                android:background="#8BD4F4AF"
+                android:gravity="top|center"
+                android:lines="4"
+                android:text="Aktueller Tag"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/deadlineView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aktuTagView"
+                android:layout_margin="10dp"
+                android:background="#A6EDE4AF"
+                android:gravity="center|top"
+                android:lines="3"
+                android:paddingStart="5dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="5dp"
+                android:text="DEADLINE"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/hinzufuegeButton"
+            android:layout_width="60dp"
+            android:layout_height="62dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/baseline_plus"
+            android:contentDescription="Hinzufügen von Aufgaben, Terminen..."
+            android:padding="6dp"
+            android:scaleType="fitCenter" />
+
+
+        <ImageButton
+            android:id="@+id/speicherungListe"
+            android:layout_width="44dp"
+            android:layout_height="51dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/circle_format"
+            android:contentDescription="Hinzufuegen"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/list_icon" />
+
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

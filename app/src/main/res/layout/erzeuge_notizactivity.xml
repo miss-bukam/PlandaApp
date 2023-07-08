@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Kann später alles in Deatil designed werden, gerne von Gizem HAHAHA -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/homeButton"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:contentDescription="hier kann man zurück zum Home menue"
+            android:src="@drawable/homebutton" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notiz"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="20dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/notizenTitel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/textborder"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="18dp"
+        android:paddingStart="15dp"
+        android:hint="Titel"
+        android:padding="6dp"
+        android:inputType="text"
+        android:textSize="19dp" />
+
+    <EditText
+        android:id="@+id/notizTextEingabe"
+        android:layout_width="match_parent"
+        android:layout_height="454dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/notizenhintergrund"
+        android:gravity="top|start"
+        android:hint="Schreib etwas ..."
+        android:inputType="textMultiLine"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="170dp"
+        android:scrollbarSize="9dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"></EditText>
+
+    <Button
+        android:id="@+id/buttonNotizen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="#6A9736"
+        android:text="Notiz erstellen"
+        android:layout_gravity="center"
+        android:textColor="@color/white" />
+
+</LinearLayout>

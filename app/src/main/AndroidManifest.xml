@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--  Dient zur Ausführung der App, in der strings.xml kann name der App geändert werden -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+
+        android:icon="@mipmap/ic_neu_planda_extremneu"
+        android:roundIcon="@mipmap/ic_neu_planda_extremneu"
+        android:label="@string/Planda"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PlandaNEU"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Um erzeuge Aufgaben activity auszuführen-->
+        <activity
+            android:name=".Activities.erzeugeAufgabenActivity"
+            android:label="Erzeuge Aufgaben"></activity>
+
+        <!--Um erzeuge Notiz activity auszuführen-->
+        <activity
+            android:name=".Activities.erzeugeNotizActivity"
+            android:label="Erzeuge Notizen"></activity>
+
+        <!--Um erzeuge Ereignisse activity auszuführen-->
+        <activity
+            android:name=".Activities.erzeugeEreignisActivity"
+            android:label="Erzeuge Ereignisse"></activity>
+
+        <!--Um Speicherungsnotizen activity auszuführen-->
+        <activity
+            android:name="Control.speicherungDerDaten"
+            android:label="Erzeuge Ereignisse"></activity>
+
+
+
+    </application>
+
+</manifest>
